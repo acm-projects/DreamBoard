@@ -33,8 +33,8 @@ Plan your next perfect room by selecting any color palette of your choice. This 
       - Use this for database. Easy to store in NoSQL because there’s no structure and Express/Mongoose are Node.js friendly. 
 
 # Software to Install
-  - [Visual Studio Code for front-end and back-end IDE](https://code.visualstudio.com)
-  - [NPM (package manager for JavaScript](https://www.npmjs.com)
+  - [IDE (both front-end and back-end) - Visual Studio Code](https://code.visualstudio.com)
+  - [NPM (package manager for JavaScript)](https://www.npmjs.com)
   - [Front-end: Vue.js](https://vuejs.org)
   - [Back-end: Node.js](node.js)
   - [Git CLI for version control](https://git-scm.com/downloads)
