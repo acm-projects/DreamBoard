@@ -16,6 +16,7 @@ Plan your next perfect room by selecting any color palette of your choice. This 
     - Vue.js + Bootstrap/Tailwind
   - Back-end: 
     -  Node.js
+    -  Mongoose (package to create API's & Schema's for MongoDB databases)
   - API’s
     - Imagga Color Extractor + documentation (You can insert an image endpoint to this API and it returns a palette of colors to use)
       - https://docs.imagga.com/#introduction
@@ -25,9 +26,10 @@ Plan your next perfect room by selecting any color palette of your choice. This 
      - Narrow the search results to only return furniture products
      - You can add filters to only return products of a specific color.
    - Database storage
-    - MongoDB and Mongoose
+    - MongoDB
       - Use this for database. Easy to store in NoSQL because there’s no structure and Express/Mongoose are Node.js friendly. 
 
 # Software to Install
+ 
 
 # Tutorials
