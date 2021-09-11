@@ -11,11 +11,17 @@ Plan your next perfect room by selecting any color palette of your choice. This 
   - Give furniture suggestions based on past searches/viewed items.
   - Create public "rooms" to get other opinions on your furniture combinations!
 # Milestones
-  | Week # | Deliverable | Front-end | Back-end | Both |
-|--------|-------------|-----------|----------|------|
-| 1      |             |           |          |      |
-| 2      |             |           |          |      |
-| 3      |             |           |          |      | 
+| Week # | Deliverables | Front-end                                    | Back-end                                                                | Both |
+|--------|--------------|----------------------------------------------|-------------------------------------------------------------------------|------|
+| 1      |              | Start wireframe and watch API/Vue tutorials. | Make a few test POST/GET requests on Postman to see how the data works  |      |                                                             
+| 2      |              |                                              |                                                                         |      |
+| 3      |              |                                              |                                                                         |      |
+| 4      |              |                                              |                                                                         |      |
+| 5      |              |                                              |                                                                         |      |
+| 6      |              |                                              |                                                                         |      |
+| 7      |              |                                              |                                                                         |      |
+| 8      |              |                                              |                                                                         |      |
+| 9      |              |                                              |                                                                         |      |
   
 # Tech Stack
   - Front-end: 
