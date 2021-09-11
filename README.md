@@ -2,14 +2,14 @@
 Plan your next perfect room by selecting any color palette of your choice. This website will then scout the ideal furniture choices for your dream room along with the perfect side pieces to go along!
 
 # MVP
-  - 1. Return furniture suggestions to a user based on a given color palette.
-  - 2. Upload images of your own furniture to get a matching color palette back.
-  - 3. Create a "saved" section to save multiple ideas of a room with its corresponding pieces of furniture, similar to Instagram “collections”
+  - Return furniture suggestions to a user based on a given color palette.
+  - Upload images of your own furniture to get a matching color palette back.
+  - Create a "saved" section to save multiple ideas of a room with its corresponding pieces of furniture, similar to Instagram “collections”
 
 # Stretch Goals
-  - 1. Provide a suggested/trending color palette generator for users.
-  - 2. Give furniture suggestions based on past searches/viewed items.
-  - 3. Create public "rooms" to get other opinions on your furniture combinations!
+  - Provide a suggested/trending color palette generator for users.
+  - Give furniture suggestions based on past searches/viewed items.
+  - Create public "rooms" to get other opinions on your furniture combinations!
 
 # Tech Stack
   - Front-end: 
@@ -37,8 +37,8 @@ Plan your next perfect room by selecting any color palette of your choice. This 
   - [NPM (package manager for JavaScript](https://www.npmjs.com)
   - [Front-end: Vue.js](https://vuejs.org)
   - [Back-end: Node.js](node.js)
-  - [Git CLI for version control] (https://git-scm.com/downloads)
-  - [Compass: Helpful GUI tool to see databases created] (https://www.mongodb.com/products/compass)
+  - [Git CLI for version control](https://git-scm.com/downloads)
+  - [Compass: Helpful GUI tool to see databases created](https://www.mongodb.com/products/compass)
   - [POSTMAN (test your API requests)](https://www.postman.com)
   - Javascript packages for back-end:
     1. [Express](https://expressjs.com)
@@ -54,7 +54,7 @@ Plan your next perfect room by selecting any color palette of your choice. This 
   - Tutorials for Rookies! :) 
     1. [Vue.js](https://www.youtube.com/watch?v=5LYrN_cAJoA&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa)
     2. [Node.js REST API tutorials](https://www.youtube.com/watch?v=BRdcRFvuqsE&list=PL4cUxeGkcC9jBcybHMTIia56aV21o2cZ8)
-    3. [Wait, what's an API?] (https://www.youtube.com/watch?v=SLwpqD8n3d0)
+    3. [Wait, what's an API?](https://www.youtube.com/watch?v=SLwpqD8n3d0)
    
   - [Helpful GitHub Cheatsheet 1](https://education.github.com/git-cheat-sheet-education.pdf)
   - [Helpful GitHub Cheatsheet 2](https://drive.google.com/file/d/1OddwoSvNJ3dQuEBw3RERieMXmOicif9_/view)
