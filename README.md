@@ -10,7 +10,13 @@ Plan your next perfect room by selecting any color palette of your choice. This 
   - Provide a suggested/trending color palette generator for users.
   - Give furniture suggestions based on past searches/viewed items.
   - Create public "rooms" to get other opinions on your furniture combinations!
-
+# Milestones
+  | Week # | Deliverable | Front-end | Back-end | Both |
+|--------|-------------|-----------|----------|------|
+| 1      |             |           |          |      |
+| 2      |             |           |          |      |
+| 3      |             |           |          |      | 
+  
 # Tech Stack
   - Front-end: 
     - Vue.js + Bootstrap/Tailwind
