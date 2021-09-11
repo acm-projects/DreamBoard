@@ -38,11 +38,14 @@ Plan your next perfect room by selecting any color palette of your choice. This 
   - [Front-end: Vue.js](https://vuejs.org)
   - [Back-end: Node.js](node.js)
   - [Git CLI for version control](https://git-scm.com/downloads)
-  - [Compass: Helpful GUI tool to see databases created](https://www.mongodb.com/products/compass)
+  - [Compass: Helpful GUI tool to see databases created in MongoDB](https://www.mongodb.com/products/compass)
   - [POSTMAN (test your API requests)](https://www.postman.com)
   - Javascript packages for back-end:
     1. [Express](https://expressjs.com)
     2. [Mongoose](https://www.npmjs.com/package/mongoose)
+  - Javascript packages for front-end:
+    1. [Bootstrap](https://bootstrap-vue.org/docs)
+    2. [Tailwind](https://tailwindcss.com)
   
 # Tutorials
   - Setting up 
