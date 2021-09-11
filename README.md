@@ -47,15 +47,16 @@ Plan your next perfect room by selecting any color palette of your choice. This 
 # Tutorials
   - Setting up 
     1. Front-end
-      - [Vue install] (https://www.youtube.com/watch?v=RNWfNwh1kW8)
+      - [Vue install](https://www.youtube.com/watch?v=RNWfNwh1kW8)
     2. Back-end
-      - [Node.js install] (https://www.youtube.com/watch?v=JINE4D0Syqw)
-    3. [Visual Studio set-up with NPM] (https://www.youtube.com/watch?v=sJ7nDNNpOMA)
+      - [Node.js install](https://www.youtube.com/watch?v=JINE4D0Syqw)
+    3. [Visual Studio set-up with NPM](https://www.youtube.com/watch?v=sJ7nDNNpOMA)
   - Tutorials for Rookies! :) 
     1. [Vue.js](https://www.youtube.com/watch?v=5LYrN_cAJoA&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa)
     2. [Node.js REST API tutorials](https://www.youtube.com/watch?v=BRdcRFvuqsE&list=PL4cUxeGkcC9jBcybHMTIia56aV21o2cZ8)
     3. [Wait, what's an API?](https://www.youtube.com/watch?v=SLwpqD8n3d0)
-   
+    4. [How to use Google Cloud Vision API with Node.js](https://www.youtube.com/watch?v=BFOeM8ATWdk)
+    5. [Integrate Express API with Vue.js](https://www.youtube.com/watch?v=TYPb_Hz7Loo&list=PLuNEz8XtB51KwT2ywpg_W9BGFqVKLGg_m)
   - [Helpful GitHub Cheatsheet 1](https://education.github.com/git-cheat-sheet-education.pdf)
   - [Helpful GitHub Cheatsheet 2](https://drive.google.com/file/d/1OddwoSvNJ3dQuEBw3RERieMXmOicif9_/view)
   - [Article on UI/UX tips](https://www.uxpin.com/studio/blog/guide-design-consistency-best-practices-ui-ux-designers/)
