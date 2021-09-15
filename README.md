@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://c.tenor.com/Y1amstUjGyUAAAAC/sky-anime.gif" width="250">
+<img src="https://c.tenor.com/Y1amstUjGyUAAAAC/sky-anime.gif" width="500">
   </p>
   
 # DreamBoard ☁️🛋
