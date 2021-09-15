@@ -1,4 +1,4 @@
-# DreamBoard ☁️
+# DreamBoard ☁️🛋
 Plan your next perfect room by selecting any color palette of your choice. This website will then scout the ideal furniture choices for your dream room along with the perfect side pieces to go along!
 
 # MVP
@@ -11,18 +11,18 @@ Plan your next perfect room by selecting any color palette of your choice. This 
   - Give furniture suggestions based on past searches/viewed items.
   - Create public "rooms" to get other opinions on your furniture combinations!
 # Milestones
-| Week # | Deliverables | Front-end                                    | Back-end                                                                | Both |
-|--------|--------------|----------------------------------------------|-------------------------------------------------------------------------|------|
-| 1      |              | Start wireframe and watch API/Vue tutorials. | Make a few test POST/GET requests on Postman to see how the data works  |      |                                                             
-| 2      |              |                                              |                                                                         |      |
-| 3      |              |                                              |                                                                         |      |
-| 4      |              |                                              |                                                                         |      |
-| 5      |              |                                              |                                                                         |      |
-| 6      |              |                                              |                                                                         |      |
-| 7      |              |                                              |                                                                         |      |
-| 8      |              |                                              |                                                                         |      |
-| 9      |              |                                              |                                                                         |      |
-  
+| Week # | Deliverables |
+|--------|--------------|
+| 1      | Set up development environments. Start wireframes & API tutorials for backend. Push test files to GitHub.                                    |                                                             
+| 2      | Start "Color Picker" page. Set up middleware to fetch API information about furniture based on color.                                        |
+| 3      | Keep working on week 2 deliverable. Start working on integration of color picker page with front-end.                                        |
+| 4      | Upload an image page. Send an image to the Imagga Color Extractor to extract color of furniture.                                             |
+| 5      | Continue working on Week 4 deliverable. Integrate front-end and back-end. Start creating MongoDB schema for favorite color choices.          |
+| 6      | Start work on "saved page". Finish any remaining integrations for "Upload Image" page and "Color Picker" page                                |
+| 7      | Continue work on "saved page" and continue integration.                                                                                      |             
+| 8      | Complete any remaining integrations. Start working on presentation slide deck.                                                               |
+| 9      | Practice presentation and add finishing touches! You can do it! 💙                                                                           |
+
 # Tech Stack
   - Front-end: 
     - Vue.js + Bootstrap/Tailwind
