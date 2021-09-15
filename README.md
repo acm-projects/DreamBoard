@@ -48,7 +48,7 @@ Plan your next perfect room by selecting any color palette of your choice. This 
   - [IDE (both front-end and back-end) - Visual Studio Code](https://code.visualstudio.com)
   - [NPM (package manager for JavaScript)](https://www.npmjs.com)
   - [Front-end: Vue.js](https://vuejs.org)
-  - [Back-end: Node.js](node.js)
+  - [Back-end: Node.js](https://nodejs.org/en/download/)
   - [Git CLI for version control](https://git-scm.com/downloads)
   - [Compass: Helpful GUI tool to see databases created in MongoDB](https://www.mongodb.com/products/compass)
   - [POSTMAN (test your API requests)](https://www.postman.com)
