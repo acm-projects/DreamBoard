@@ -76,7 +76,7 @@ Plan your next perfect room by selecting any color palette of your choice. This 
     3. [Wait, what's an API?](https://www.youtube.com/watch?v=SLwpqD8n3d0)
     4. [How to use Google Cloud Vision API with Node.js](https://www.youtube.com/watch?v=BFOeM8ATWdk)
     5. [Integrate Express API with Vue.js](https://www.youtube.com/watch?v=TYPb_Hz7Loo&list=PLuNEz8XtB51KwT2ywpg_W9BGFqVKLGg_m)
-    6. [W3 Schools tutorials for HTML & CSS] (https://www.w3schools.com)
+    6. [W3 Schools tutorials for HTML & CSS](https://www.w3schools.com)
   - [Helpful GitHub Cheatsheet 1](https://education.github.com/git-cheat-sheet-education.pdf)
   - [Helpful GitHub Cheatsheet 2](https://drive.google.com/file/d/1OddwoSvNJ3dQuEBw3RERieMXmOicif9_/view)
   - [Article on UI/UX tips](https://www.uxpin.com/studio/blog/guide-design-consistency-best-practices-ui-ux-designers/)
