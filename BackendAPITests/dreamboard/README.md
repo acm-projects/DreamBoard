@@ -1,2 +1,0 @@
-# dreamboard
-A JavaScript project
