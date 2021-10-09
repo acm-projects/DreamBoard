@@ -1491,31 +1491,5 @@
 				]
 			}
 		}
-	],
-	"variable": [
-		{
-			"key": "SerpAPIKey",
-			"value": "3497f6c22f1c607b2780390efeff20dd969ece7702e04b7d0115256ea4804362"
-		},
-		{
-			"key": "ImaggaAuthUsername",
-			"value": "acc_f39019f03621b38"
-		},
-		{
-			"key": "ImaggaAuthPass",
-			"value": "cb8352fc5800eeeb49495b26de57d0b0"
-		},
-		{
-			"key": "SerpAPI Default Query",
-			"value": "mid century modern chair"
-		},
-		{
-			"key": "ImaggaDefaultImage",
-			"value": "https://cdn3.volusion.com/euhfr.xvuyx/v/vspfiles/photos/BUCK-XEKX2MOON2-2.jpg?v-cache=1557993632"
-		},
-		{
-			"key": "SerpAPIWalmartIDSample",
-			"value": "3X8CYAQH484I"
-		}
 	]
 }
