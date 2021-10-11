@@ -1,0 +1,516 @@
+{
+  "mode": "analogic",
+  "count": 5,
+  "colors": [
+    {
+      "hex": {
+        "value": "#827DFC",
+        "clean": "827DFC"
+      },
+      "rgb": {
+        "fraction": {
+          "r": 0.5098039215686274,
+          "g": 0.49019607843137253,
+          "b": 0.9882352941176471
+        },
+        "r": 130,
+        "g": 125,
+        "b": 252,
+        "value": "rgb(130, 125, 252)"
+      },
+      "hsl": {
+        "fraction": {
+          "h": 0.6732283464566928,
+          "s": 0.954887218045113,
+          "l": 0.7392156862745098
+        },
+        "h": 242,
+        "s": 95,
+        "l": 74,
+        "value": "hsl(242, 95%, 74%)"
+      },
+      "hsv": {
+        "fraction": {
+          "h": 0.6732283464566928,
+          "s": 0.5039682539682541,
+          "v": 0.9882352941176471
+        },
+        "value": "hsv(242, 50%, 99%)",
+        "h": 242,
+        "s": 50,
+        "v": 99
+      },
+      "name": {
+        "value": "Blueberry",
+        "closest_named_hex": "#4F86F7",
+        "exact_match_name": false,
+        "distance": 4649
+      },
+      "cmyk": {
+        "fraction": {
+          "c": 0.4841269841269842,
+          "m": 0.503968253968254,
+          "y": 0,
+          "k": 0.0117647058823529
+        },
+        "value": "cmyk(48, 50, 0, 1)",
+        "c": 48,
+        "m": 50,
+        "y": 0,
+        "k": 1
+      },
+      "XYZ": {
+        "fraction": {
+          "X": 0.563913725490196,
+          "Y": 0.5303231372549019,
+          "Z": 1.0075882352941177
+        },
+        "value": "XYZ(56, 53, 101)",
+        "X": 56,
+        "Y": 53,
+        "Z": 101
+      },
+      "image": {
+        "bare": "http://www.thecolorapi.com/id?format=svg&named=false&hex=827DFC",
+        "named": "http://www.thecolorapi.com/id?format=svg&hex=827DFC"
+      },
+      "contrast": {
+        "value": "#000000"
+      },
+      "_links": {
+        "self": {
+          "href": "/id?hex=827DFC"
+        }
+      },
+      "_embedded": {}
+    },
+    {
+      "hex": {
+        "value": "#AB81FC",
+        "clean": "AB81FC"
+      },
+      "rgb": {
+        "fraction": {
+          "r": 0.6705882352941176,
+          "g": 0.5058823529411764,
+          "b": 0.9882352941176471
+        },
+        "r": 171,
+        "g": 129,
+        "b": 252,
+        "value": "rgb(171, 129, 252)"
+      },
+      "hsl": {
+        "fraction": {
+          "h": 0.7235772357723576,
+          "s": 0.9534883720930234,
+          "l": 0.7470588235294118
+        },
+        "h": 260,
+        "s": 95,
+        "l": 75,
+        "value": "hsl(260, 95%, 75%)"
+      },
+      "hsv": {
+        "fraction": {
+          "h": 0.7235772357723576,
+          "s": 0.48809523809523814,
+          "v": 0.9882352941176471
+        },
+        "value": "hsv(260, 49%, 99%)",
+        "h": 260,
+        "s": 49,
+        "v": 99
+      },
+      "name": {
+        "value": "Heliotrope",
+        "closest_named_hex": "#DF73FF",
+        "exact_match_name": false,
+        "distance": 3895
+      },
+      "cmyk": {
+        "fraction": {
+          "c": 0.3214285714285715,
+          "m": 0.48809523809523814,
+          "y": 0,
+          "k": 0.0117647058823529
+        },
+        "value": "cmyk(32, 49, 0, 1)",
+        "c": 32,
+        "m": 49,
+        "y": 0,
+        "k": 1
+      },
+      "XYZ": {
+        "fraction": {
+          "X": 0.6358305882352941,
+          "Y": 0.5757247058823529,
+          "Z": 1.0125611764705882
+        },
+        "value": "XYZ(64, 58, 101)",
+        "X": 64,
+        "Y": 58,
+        "Z": 101
+      },
+      "image": {
+        "bare": "http://www.thecolorapi.com/id?format=svg&named=false&hex=AB81FC",
+        "named": "http://www.thecolorapi.com/id?format=svg&hex=AB81FC"
+      },
+      "contrast": {
+        "value": "#000000"
+      },
+      "_links": {
+        "self": {
+          "href": "/id?hex=AB81FC"
+        }
+      },
+      "_embedded": {}
+    },
+    {
+      "hex": {
+        "value": "#D286FD",
+        "clean": "D286FD"
+      },
+      "rgb": {
+        "fraction": {
+          "r": 0.8235294117647058,
+          "g": 0.5254901960784314,
+          "b": 0.9921568627450981
+        },
+        "r": 210,
+        "g": 134,
+        "b": 253,
+        "value": "rgb(210, 134, 253)"
+      },
+      "hsl": {
+        "fraction": {
+          "h": 0.7731092436974789,
+          "s": 0.9674796747967481,
+          "l": 0.7588235294117647
+        },
+        "h": 278,
+        "s": 97,
+        "l": 76,
+        "value": "hsl(278, 97%, 76%)"
+      },
+      "hsv": {
+        "fraction": {
+          "h": 0.7731092436974789,
+          "s": 0.47035573122529645,
+          "v": 0.9921568627450981
+        },
+        "value": "hsv(278, 47%, 99%)",
+        "h": 278,
+        "s": 47,
+        "v": 99
+      },
+      "name": {
+        "value": "Heliotrope",
+        "closest_named_hex": "#DF73FF",
+        "exact_match_name": false,
+        "distance": 874
+      },
+      "cmyk": {
+        "fraction": {
+          "c": 0.16996047430830047,
+          "m": 0.47035573122529645,
+          "y": 0,
+          "k": 0.007843137254901933
+        },
+        "value": "cmyk(17, 47, 0, 1)",
+        "c": 17,
+        "m": 47,
+        "y": 0,
+        "k": 1
+      },
+      "XYZ": {
+        "fraction": {
+          "X": 0.7066231372549019,
+          "Y": 0.6225466666666667,
+          "Z": 1.0215776470588236
+        },
+        "value": "XYZ(71, 62, 102)",
+        "X": 71,
+        "Y": 62,
+        "Z": 102
+      },
+      "image": {
+        "bare": "http://www.thecolorapi.com/id?format=svg&named=false&hex=D286FD",
+        "named": "http://www.thecolorapi.com/id?format=svg&hex=D286FD"
+      },
+      "contrast": {
+        "value": "#000000"
+      },
+      "_links": {
+        "self": {
+          "href": "/id?hex=D286FD"
+        }
+      },
+      "_embedded": {}
+    },
+    {
+      "hex": {
+        "value": "#F78AFE",
+        "clean": "F78AFE"
+      },
+      "rgb": {
+        "fraction": {
+          "r": 0.9686274509803922,
+          "g": 0.5411764705882353,
+          "b": 0.996078431372549
+        },
+        "r": 247,
+        "g": 138,
+        "b": 254,
+        "value": "rgb(247, 138, 254)"
+      },
+      "hsl": {
+        "fraction": {
+          "h": 0.8232758620689654,
+          "s": 0.9830508474576272,
+          "l": 0.7686274509803921
+        },
+        "h": 296,
+        "s": 98,
+        "l": 77,
+        "value": "hsl(296, 98%, 77%)"
+      },
+      "hsv": {
+        "fraction": {
+          "h": 0.8232758620689654,
+          "s": 0.4566929133858268,
+          "v": 0.996078431372549
+        },
+        "value": "hsv(296, 46%, 100%)",
+        "h": 296,
+        "s": 46,
+        "v": 100
+      },
+      "name": {
+        "value": "Shocking Pink",
+        "closest_named_hex": "#FB7EFD",
+        "exact_match_name": false,
+        "distance": 259
+      },
+      "cmyk": {
+        "fraction": {
+          "c": 0.02755905511811025,
+          "m": 0.4566929133858268,
+          "y": 0,
+          "k": 0.0039215686274509665
+        },
+        "value": "cmyk(3, 46, 0, 0)",
+        "c": 3,
+        "m": 46,
+        "y": 0,
+        "k": 0
+      },
+      "XYZ": {
+        "fraction": {
+          "X": 0.7727788235294117,
+          "Y": 0.6648964705882352,
+          "Z": 1.029975294117647
+        },
+        "value": "XYZ(77, 66, 103)",
+        "X": 77,
+        "Y": 66,
+        "Z": 103
+      },
+      "image": {
+        "bare": "http://www.thecolorapi.com/id?format=svg&named=false&hex=F78AFE",
+        "named": "http://www.thecolorapi.com/id?format=svg&hex=F78AFE"
+      },
+      "contrast": {
+        "value": "#000000"
+      },
+      "_links": {
+        "self": {
+          "href": "/id?hex=F78AFE"
+        }
+      },
+      "_embedded": {}
+    },
+    {
+      "hex": {
+        "value": "#FE8EE3",
+        "clean": "FE8EE3"
+      },
+      "rgb": {
+        "fraction": {
+          "r": 0.996078431372549,
+          "g": 0.5568627450980392,
+          "b": 0.8901960784313725
+        },
+        "r": 254,
+        "g": 142,
+        "b": 227,
+        "value": "rgb(254, 142, 227)"
+      },
+      "hsl": {
+        "fraction": {
+          "h": 0.8735119047619048,
+          "s": 0.9824561403508772,
+          "l": 0.7764705882352941
+        },
+        "h": 314,
+        "s": 98,
+        "l": 78,
+        "value": "hsl(314, 98%, 78%)"
+      },
+      "hsv": {
+        "fraction": {
+          "h": 0.8735119047619048,
+          "s": 0.4409448818897638,
+          "v": 0.996078431372549
+        },
+        "value": "hsv(314, 44%, 100%)",
+        "h": 314,
+        "s": 44,
+        "v": 100
+      },
+      "name": {
+        "value": "Princess Perfume",
+        "closest_named_hex": "#FF85CF",
+        "exact_match_name": false,
+        "distance": 644
+      },
+      "cmyk": {
+        "fraction": {
+          "c": 0,
+          "m": 0.4409448818897638,
+          "y": 0.10629921259842526,
+          "k": 0.0039215686274509665
+        },
+        "value": "cmyk(0, 44, 11, 0)",
+        "c": 0,
+        "m": 44,
+        "y": 11,
+        "k": 0
+      },
+      "XYZ": {
+        "fraction": {
+          "X": 0.7705972549019607,
+          "Y": 0.6743066666666667,
+          "Z": 0.9317337254901961
+        },
+        "value": "XYZ(77, 67, 93)",
+        "X": 77,
+        "Y": 67,
+        "Z": 93
+      },
+      "image": {
+        "bare": "http://www.thecolorapi.com/id?format=svg&named=false&hex=FE8EE3",
+        "named": "http://www.thecolorapi.com/id?format=svg&hex=FE8EE3"
+      },
+      "contrast": {
+        "value": "#000000"
+      },
+      "_links": {
+        "self": {
+          "href": "/id?hex=FE8EE3"
+        }
+      },
+      "_embedded": {}
+    }
+  ],
+  "seed": {
+    "hex": {
+      "value": "#8C87FF",
+      "clean": "8C87FF"
+    },
+    "rgb": {
+      "fraction": {
+        "r": 0.5490196078431373,
+        "g": 0.5294117647058824,
+        "b": 1
+      },
+      "r": 140,
+      "g": 135,
+      "b": 255,
+      "value": "rgb(140, 135, 255)"
+    },
+    "hsl": {
+      "fraction": {
+        "h": 0.673611111111111,
+        "s": 1,
+        "l": 0.7647058823529411
+      },
+      "h": 242,
+      "s": 100,
+      "l": 76,
+      "value": "hsl(242, 100%, 76%)"
+    },
+    "hsv": {
+      "fraction": {
+        "h": 0.673611111111111,
+        "s": 0.47058823529411764,
+        "v": 1
+      },
+      "value": "hsv(242, 47%, 100%)",
+      "h": 242,
+      "s": 47,
+      "v": 100
+    },
+    "name": {
+      "value": "Blueberry",
+      "closest_named_hex": "#4F86F7",
+      "exact_match_name": false,
+      "distance": 7252
+    },
+    "cmyk": {
+      "fraction": {
+        "c": 0.4509803921568627,
+        "m": 0.47058823529411764,
+        "y": 0,
+        "k": 0
+      },
+      "value": "cmyk(45, 47, 0, 0)",
+      "c": 45,
+      "m": 47,
+      "y": 0,
+      "k": 0
+    },
+    "XYZ": {
+      "fraction": {
+        "X": 0.5962333333333333,
+        "Y": 0.567556862745098,
+        "Z": 1.0242019607843138
+      },
+      "value": "XYZ(60, 57, 102)",
+      "X": 60,
+      "Y": 57,
+      "Z": 102
+    },
+    "image": {
+      "bare": "http://www.thecolorapi.com/id?format=svg&named=false&hex=8C87FF",
+      "named": "http://www.thecolorapi.com/id?format=svg&hex=8C87FF"
+    },
+    "contrast": {
+      "value": "#000000"
+    },
+    "_links": {
+      "self": {
+        "href": "/id?hex=8C87FF"
+      }
+    },
+    "_embedded": {}
+  },
+  "image": {
+    "bare": "http://www.thecolorapi.com/scheme?format=svg&named=false&hex=8C87FF&mode=analogic&count=5",
+    "named": "http://www.thecolorapi.com/scheme?format=svg&hex=8C87FF&mode=analogic&count=5"
+  },
+  "_links": {
+    "self": "/scheme?hex=8C87FF&mode=analogic&count=5",
+    "schemes": {
+      "monochrome": "/scheme?hex=8C87FF&mode=monochrome&count=5",
+      "monochrome-dark": "/scheme?hex=8C87FF&mode=monochrome-dark&count=5",
+      "monochrome-light": "/scheme?hex=8C87FF&mode=monochrome-light&count=5",
+      "analogic": "/scheme?hex=8C87FF&mode=analogic&count=5",
+      "complement": "/scheme?hex=8C87FF&mode=complement&count=5",
+      "analogic-complement": "/scheme?hex=8C87FF&mode=analogic-complement&count=5",
+      "triad": "/scheme?hex=8C87FF&mode=triad&count=5",
+      "quad": "/scheme?hex=8C87FF&mode=quad&count=5"
+    }
+  },
+  "_embedded": {}
+}
