@@ -1,0 +1,26 @@
+{
+  "name": "dreamboard",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"> <img src=\"https://c.tenor.com/Y1amstUjGyUAAAAC/sky-anime.gif\" width=\"350\">   </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acm-projects/DreamBoard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acm-projects/DreamBoard/issues"
+  },
+  "homepage": "https://github.com/acm-projects/DreamBoard#readme",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "dotenv": "^10.0.0",
+    "google-search-results-nodejs": "^2.0.1",
+    "got": "^11.8.2"
+  }
+}
