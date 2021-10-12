@@ -1,5 +1,5 @@
 # Scrapers
 
-## Nebraska Furniture Mart
-## Ikea
-## Etsy
+- Nebraska Furniture Mart
+- Ikea
+- Etsy

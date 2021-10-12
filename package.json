@@ -21,6 +21,7 @@
     "axios": "^0.22.0",
     "dotenv": "^10.0.0",
     "google-search-results-nodejs": "^2.0.1",
-    "got": "^11.8.2"
+    "got": "^11.8.2",
+    "jssoup": "0.0.15"
   }
 }
