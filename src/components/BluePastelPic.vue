@@ -1,17 +1,22 @@
 <template>
-  <div class="container">
-    <div class="design_statement">
-      <p>Design your dream room from the comfort of your own home!</p>
+<div>
+  <div class="pic">
+    <img src="assets/lampsroom.jpg" alt="blue pastel living room" >
     </div>
-    <div class="paragraph">
-      <p>
-        Choose a color palette or upload <br />a picture of your room and we’ll
-        <br />create a personalized list of <br />furniture and accessories that
-        <br />complement your style. <br />Select an option above to get
-        started!
-      </p>
+    <div class="container">
+      <div class="design_statement">
+        <p>Design your dream room from the comfort of your own home!</p>
+        </div>
+      <div class="paragraph">
+        <p>
+          Choose a color palette or upload <br />a picture of your room and
+          we’ll <br />create a personalized list of <br />furniture and
+          accessories that <br />complement your style. <br />Select an option
+          above to get started!
+        </p>
+        </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -25,39 +30,47 @@ export default {
 
 <style scoped>
 .container {
-  flex-direction: column;
+    width: 450px;
+    height: 800px;
+  /*flex-direction: column;*/
   /*align-items: flex-end;*/
-  left: 800px;
-  top: 229px;
-  background-color: #e0eef2;
+  position: absolute;
+  right: 250px;
+  top: 100px;
   font-size: 50;
-  color: #fffdfd;
+  color: #e0eef2;
 }
 .design_statement {
-  padding-top: 25px;
-  padding-right: 25px;
+  padding-top: 10px;
+  padding-right: 2px;
   padding-left: 25px;
+  padding-bottom: 0px;
+   height: 275px;
   background: rgba(116, 167, 196, 0.87);
-  width: 467px;
-  height: 523px;
-  /*position: relative;*/
   font-family: Ruda;
   font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  /*line-height: 54px;*/
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 54px;
   color: #fffdfd;
 }
 
 .paragraph {
   background: rgba(116, 167, 196, 0.87);
-  width: 467px;
-  height: 523px;
-  font-family: Rounded Mplus 1c;
+  font-family: MPLUS;
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
-  line-height: 45px;
+  font-size: 20px;
+ 
+  padding-top: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 15px;
   color: #fffdfd;
+}
+
+.pic {
+  border-radius: 20px;
+  position: absolute;
 }
 </style>
