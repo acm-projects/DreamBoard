@@ -2,4 +2,3 @@
 
 - Nebraska Furniture Mart
 - Ikea
-- Etsy
