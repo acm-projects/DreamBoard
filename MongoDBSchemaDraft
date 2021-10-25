@@ -1,0 +1,26 @@
+User Data
+    1. Name
+    2. Email
+    3. Location
+    4. Logged In?
+    5. Account Age
+
+User's Collections
+    1. Name
+    2. Style
+    3. Palette
+    4. Theme
+    5. Saved Date
+    6. Edits (JSON)
+
+Single Collection Object (Furniture)
+    1. Name
+    2. Source
+    3. Link
+    4. Liked?
+    5. Color Name
+    6. Color Hex
+    7. Style
+    8. Type
+    9. Price
+   10. Fetch Date
