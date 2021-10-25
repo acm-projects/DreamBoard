@@ -35,7 +35,7 @@ function ColorsCall(filename,hex,mode)
 
 ColorsCall(filename='PlainColorsAPICall.json',hex="8C87FF",mode="analogic");
 
-// // Test with Imagga API Colors Endpoint
+// Test with Imagga API Colors Endpoint
 
 const imageUrl = 'https://cdn3.volusion.com/euhfr.xvuyx/v/vspfiles/photos/BUCK-XEKX2MOON2-2.jpg?v-cache=1557993632';
 var imaggaurl = 'https://api.imagga.com/v2/colors?image_url=' + encodeURIComponent(imageUrl) + "&extract_overall_colors=0";
@@ -44,7 +44,8 @@ async function imaggaCall()
 {
     try
     {
-        return got(imaggaurl, {username: process.env.IMAGGA_API_KEY, password: process.env.IMAGGA_API_SECRET}).then(token => { return token });
+        return got(imaggaurl, {username: process.env.IMAGGA_API_KEY, password: process.env.IMAGGA_API_SECRET}).then(token =>
+            { return token });
     }
     catch (error)
     {
@@ -55,7 +56,7 @@ async function imaggaCall()
 let userToken = imaggaCall();
 userToken.then(function(result)
 {
-    respbody = JSON.stringify(JSON.parse(result['body']), null, 2);
-    console.log(respbody);
+    response = JSON.parse(result.body).result.colors.foreground_colors[0].html_code;
+    hex = response.slice(1,response.length);
+    ColorsCall(filename='ColorsImaggaCall.json',hex=hex,mode="analogic");
 })
-// ["colors"]["foreground_colors"]

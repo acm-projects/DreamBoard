@@ -58,7 +58,7 @@ params = {
     query: "Coffee"
   };
 
-  callback = function(data) {
+callback = function(data) {
     response = data['organic_results'];
     const body = JSON.stringify(response, null, 2);
     fs.writeFile('SerpAPI_WalmartCall.json', body, (err) => {
