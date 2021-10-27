@@ -8,7 +8,7 @@
         </div>
 <div class="backToCP">
         <p>Generate a color palette with these options.</p>
-        <li id='item'><router-link to="/about">Generate a color palette with these options.</router-link></li>
+        <li id='item'><router-link to="/colorpicker">Generate a color palette with these options.</router-link></li>
         </div>
 <div class= "container">
     <div class= "rect1"> </div>
