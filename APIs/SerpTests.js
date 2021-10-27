@@ -58,15 +58,17 @@ params = {
     query: "Coffee"
   };
 
-callback = function(data) {
-    response = data['organic_results'];
-    const body = JSON.stringify(response, null, 2);
-    fs.writeFile('SerpAPI_WalmartCall.json', body, (err) => {
-          if (err) {
-              throw err;
-          }
-          console.log("SerpAPI_WalmartCall.json saved.");
-      });
+callback = function(data)
+{
+  console.log(data);
+  response = data['organic_results'];
+  const body = JSON.stringify(response, null, 2);
+  fs.writeFile('SerpAPI_WalmartCall.json', body, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log("SerpAPI_WalmartCall.json saved.");
+    });
 };
 
 search.json(params, callback);

@@ -7,37 +7,163 @@
 */
 
 require('dotenv').config({path:"../.env"});
-const SerpApi = require('google-search-results-nodejs');
 const axios = require('axios');
-const got = require('got');
 
-// SERP
-const serpAPIKey = process.env.SERP_API_KEY;
-const serpURL = "https://serpapi.com/search";
-const search = new SerpApi.GoogleSearch(serpAPIKey);
-// ETSY
-const etsyKey = process.env.ETSY_KEYSTRING;
-const etsySecret = process.env.ETSY_SECRET;
+async function productSearchSerpAPI(params)
+{
+    const serpAPIKey = process.env.SERP_API_KEY;
+    const serpURL = "https://serpapi.com/search";
+    params['api_key'] = serpAPIKey;
+    var results = axios
+    ({
+        method: 'get',
+        url: serpURL,
+        params: params
+    })
+    .then(function (response)
+    {
+        results = response.data;
+        return results;
+    })
+    .catch(error =>
+    {
+        results = error.response.data.error;
+        return results;
+    });
+    return results;
+}
+
+async function googleProducts(query,size)
+{
+    var params =
+    {
+        q: query,
+        tbm: "shop",
+        location: "Dallas",
+        hl: "en",
+        gl: "us"
+    };
+    var products = productSearchSerpAPI(params)
+    .then(function (results)
+    {
+        if ((typeof results) === "string")
+        {
+            products = results;
+        }
+        else
+        {
+            products = Object.fromEntries(Object.entries(results["shopping_results"]).slice(0, size));
+        }
+        return products;
+    })
+    .catch(error =>
+    {
+        console.log("Google Error caught");
+        products = error;
+        return products;
+    });
+    return products;
+}
+
+async function walmartProducts(query,size)
+{
+    var params =
+    {
+        engine: "walmart",
+        query: query
+    };
+    var products = productSearchSerpAPI(params)
+    .then(function (results)
+    {
+        if ((typeof results) === "string")
+        {
+            products = results;
+        }
+        else
+        {
+            products = Object.fromEntries(Object.entries(results['organic_results']).slice(0, size));
+        }
+        return products;
+    })
+    .catch(error =>
+    {
+        console.log("Walmart Error caught");
+        products = error;
+        return products;
+    });
+    return products;
+}
+
+async function homeDepotProducts(query,size)
+{
+    var params =
+    {
+        engine: "home_depot",
+        q: query
+    };
+    var products = productSearchSerpAPI(params)
+    .then(function (results)
+    {
+        if ((typeof results) === "string")
+        {
+            products = results;
+        }
+        else
+        {
+            products = Object.fromEntries(Object.entries(results['products']).slice(0, size));
+        }
+        return products;
+    })
+    .catch(error =>
+    {
+        console.log("Walmart Error caught");
+        products = error;
+        return products;
+    });
+    return products;
+}
+
+
+
+
+async function etsyProducts(query,size) // ,color,colorRange
+{
+    const etsyKey = process.env.ETSY_KEYSTRING;
+    const etsySecret = process.env.ETSY_SECRET;
+
+    var results = axios
+    ({
+        method: "get",
+        url: "https://openapi.etsy.com/v3/application/listings/active",
+        auth:
+        {
+            username: etsyKey,
+            password: etsySecret
+        },
+        params:
+        {
+            limit: size,
+            keywords: query
+            // color: color,
+            // color_accuracy: colorRange
+        }
+    }).then(function (response)
+    {
+        console.log(respose);
+        results = response;
+        return results;
+    }).catch(error =>
+    {
+        results = error.response;
+        return results;
+    });
+    return results;
+}
 
 module.exports =
 {
-    googleProducts: async function(query)
-    {
-        var params =
-        {
-            q: query,
-            tbm: "shop",
-            location: "Dallas",
-            hl: "en",
-            gl: "us"
-        };
-        var googleData;
-        const callback = function(data)
-        {
-            return (data['inline_shopping_results']);
-        };
-        // Show result as JSON
-        let result = search.json(params, callback);
-        console.log(result);
-    }
+    googleProducts,
+    walmartProducts,
+    homeDepotProducts,
+    etsyProducts
 }
