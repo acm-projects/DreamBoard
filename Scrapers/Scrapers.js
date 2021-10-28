@@ -49,10 +49,28 @@ module.exports = {
                     size--;
                 }
 
+                re = /img class=\"range-revamp-aspect-ratio-image__image\"/g;
+                const rawImages = [];
+                i = 0;
+                size = temp;
+                while((match = re.exec(html)) != null && size != 0) {
+                    var start = match.index;
+                    var end;
+                    for(var j = 0; html.slice(start + j, start + j + 5) != " src=\""; j++) {
+                        start = start + j + 6;
+                    }
+                    for(var k = 0; html.charAt(start + k) != '\"'; k++) {
+                        end = start + k;
+                    }
+                    rawLinks[i] = html.slice(start, end + 1);
+                    i++;
+                    size--;
+                }
+
                 for(var i = 0; i < Math.min(rawTitles.length, rawLinks.length); i++) {
                     itemDict.push({
                         key: rawTitles[i],
-                        value: rawLinks[i]
+                        value: [rawLinks[i], rawImages[i]]
                     });
                 }
             }).catch(function(err) {
@@ -73,10 +91,11 @@ module.exports = {
             const soup = new JSSoup(response.body);
             const rawTitles = soup.findAll('div', 'pdp-link');
             const rawLinks = soup.findAll('div', 'image-container');
+            const rawImages = soup.findAll('img', 'tile-image');
             for(var i = 0; i < Math.min(rawTitles.length, rawLinks.length); i++) {
                 itemDict.push({
                     key: rawTitles[i].nextElement.nextElement._text,
-                    value: "https://www.nfm.com" + rawLinks[i].nextElement.attrs.href
+                    value: ["https://www.nfm.com" + rawLinks[i].nextElement.attrs.href, rawImages[i].attrs.src]
                 });
             }
         } catch (error) {
