@@ -4,6 +4,7 @@
         Home Depot Product Search
         Walmart Product Search
     - Etsy API
+        Etsy Listing Search
 */
 
 require('dotenv').config({path:"../.env"});
@@ -27,7 +28,7 @@ async function productSearchSerpAPI(params)
     })
     .catch(error =>
     {
-        results = error.response.data.error;
+        results = "Error " + (error.response.status) + ": " + error.response.data.error;
         return results;
     });
     return results;
@@ -48,7 +49,7 @@ async function googleProducts(query,size)
     {
         if ((typeof results) === "string")
         {
-            products = results;
+            products = "Google Error caught: " + results;
         }
         else
         {
@@ -58,8 +59,7 @@ async function googleProducts(query,size)
     })
     .catch(error =>
     {
-        console.log("Google Error caught");
-        products = error;
+        products = "Google Error caught: " + error;
         return products;
     });
     return products;
@@ -77,7 +77,7 @@ async function walmartProducts(query,size)
     {
         if ((typeof results) === "string")
         {
-            products = results;
+            products = "Walmart Error caught: " + results;
         }
         else
         {
@@ -87,8 +87,7 @@ async function walmartProducts(query,size)
     })
     .catch(error =>
     {
-        console.log("Walmart Error caught");
-        products = error;
+        products = "Walmart Error caught" + error;
         return products;
     });
     return products;
@@ -106,7 +105,7 @@ async function homeDepotProducts(query,size)
     {
         if ((typeof results) === "string")
         {
-            products = results;
+            products = "Home Depot Error caught: " + results;
         }
         else
         {
@@ -116,47 +115,35 @@ async function homeDepotProducts(query,size)
     })
     .catch(error =>
     {
-        console.log("Walmart Error caught");
-        products = error;
+        products = "Home Depot Error caught" + error;
         return products;
     });
     return products;
 }
 
-
-
-
 async function etsyProducts(query,size) // ,color,colorRange
 {
     const etsyKey = process.env.ETSY_KEYSTRING;
-    const etsySecret = process.env.ETSY_SECRET;
-
-    var results = axios
-    ({
-        method: "get",
-        url: "https://openapi.etsy.com/v3/application/listings/active",
-        auth:
-        {
-            username: etsyKey,
-            password: etsySecret
-        },
-        params:
-        {
-            limit: size,
-            keywords: query
-            // color: color,
-            // color_accuracy: colorRange
-        }
-    }).then(function (response)
+    var url = "https://openapi.etsy.com/v3/application/listings/active?".concat("limit=", size, "&keywords=", query);
+    var config =
     {
-        console.log(respose);
-        results = response;
+        method: 'get',
+        url: url,
+        headers:
+        {
+            'x-api-key': etsyKey
+        }
+    };
+    var results = axios(config)
+    .then(function (response)
+    {
+        results = response.data.results;
         return results;
     }).catch(error =>
     {
-        results = error.response;
+        results = "Etsy Error caught: " + "Error " + error.response.status + ": " + error.response.data.error;
         return results;
-    });
+    })
     return results;
 }
 
