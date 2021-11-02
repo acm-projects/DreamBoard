@@ -35,7 +35,8 @@ Send to backend:
     Size of return - 1
 Return to frontend (Per object):
     Name
-    Source
+    Vendor's Source
+    Vendor
     Product link
     Price
     Thumbnail

@@ -1,4 +1,3 @@
-const { response } = require('express');
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -16,7 +15,7 @@ function queryBuilder(colors,styles,types,size)
 
 var myLogger = function (req, res, next)
 {
-  reqPrep = queryBuilder(["baby blue","sage green", "lemon yellow"], "Scandinavian", "Bookcases", 20);
+  reqPrep = queryBuilder(["periwinkle","mermaid", "daisy"], "Scandinavian", "Bookcases", 20);
   req.myLogger = "queries ==>  | ";
   for (i in reqPrep)
   {
