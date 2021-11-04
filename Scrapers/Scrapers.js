@@ -34,7 +34,7 @@ module.exports = {
                     var thumbnail = rawImages[i].nextElement.nextElement.attrs.src;
                     var price = rawPrices[i].nextElement._text;
                     price = parseInt(price) * exchange;  // Conversion from SAR to USD
-                    price = "$" + price;
+                    price = "$" + price.toFixed(2);
                     itemDict.push({
                         key: title,
                         value: [link, thumbnail, price]
