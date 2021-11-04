@@ -1,49 +1,33 @@
 User Data
     1. Name
     2. Email
-    3. Location
-    4. Logged In?
-    5. Account Age
-    6. Uploads
-    7. Collections
+    3. Uploads
+    4. Array of Collections
 
 User's Collections
     1. Name
-    2. Style
+    2. Description
     3. Palette
-    4. Theme
-    5. Saved Date
-    6. Edits (JSON)
+    4. Array of Furniture
 
 Single Collection Object (Furniture)
     1. Name
-    2. Source
-    3. Link
-    4. Liked?
-    5. Color Name
-    6. Color Hex
-    7. Style
-    8. Type
-    9. Price
-   10. Fetch Date
+    2. Vendor
+    3. Vendor's source
+    4. Link
+    5. Color
+    6. Style
+    7. Type
+    8. Price
+    9. Thumbnail Shrinked
 
+-------------------------------------------------------
 
 Send to backend:
     Colors - 3 colors, or an image
     Styles - 1
     Types - 1
     Size of return - 1
-Return to frontend (Per object):
-    Name
-    Vendor's Source
-    Vendor
-    Product link
-    Price
-    Thumbnail
-    Color Name/Hex
-    Style
-    Type
-
 
 Style list:
     Minimalist
@@ -60,6 +44,7 @@ Style list:
     Vintage
     Tropical
     >Custom<
+    
 Type List:
     Sofas
     Chairs
