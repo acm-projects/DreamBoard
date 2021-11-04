@@ -26,6 +26,7 @@ homeDepotShopping.then(function(result)
 {
     console.log('Home Depot Shopping Results Output: ');
     console.log(typeof result);
+    // console.log(result);
     console.log("\n");
 });
 

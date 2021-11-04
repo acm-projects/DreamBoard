@@ -4,6 +4,8 @@ User Data
     3. Location
     4. Logged In?
     5. Account Age
+    6. Uploads
+    7. Collections
 
 User's Collections
     1. Name
@@ -24,3 +26,65 @@ Single Collection Object (Furniture)
     8. Type
     9. Price
    10. Fetch Date
+
+
+Send to backend:
+    Colors - 3 colors, or an image
+    Styles - 1
+    Types - 1
+    Size of return - 1
+Return to frontend (Per object):
+    Name
+    Vendor's Source
+    Vendor
+    Product link
+    Price
+    Thumbnail
+    Color Name/Hex
+    Style
+    Type
+
+
+Style list:
+    Minimalist
+    Mid Century Modern
+    Traditional
+    Scandinavian
+    Industrial
+    Urban
+    Country
+    Coastal
+    Eclectic
+    Cottage-core
+    Bohemian
+    Vintage
+    Tropical
+    >Custom<
+Type List:
+    Sofas
+    Chairs
+    Loveseats
+    Accent chairs
+    Recliners
+    Ottomans
+    Coffee tables
+    End tables
+    Benches
+    Accent tables
+    Chests
+    Bookcases
+    Consoles
+    Dining tables
+    Arm Chairs
+    Bar stools
+    Sideboards
+    Beds
+    Headboards
+    Nightstands
+    Dressers
+    Mirrors
+    Mattresses
+    Benches
+    Desks
+    Storage cabinets
+    >Custom<

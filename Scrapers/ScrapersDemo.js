@@ -6,7 +6,7 @@ ikea.then(function(result) {
     console.log(result);
 });
 
-var nfm = scrapers.nfmScrape("blue couch", 8);
+var nfm = scrapers.nfmScrape("blue couch", 5);
 nfm.then(function(result) {
     console.log('NFM Scraper Function Output: \n');
     console.log(result);

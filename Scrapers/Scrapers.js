@@ -23,60 +23,6 @@ module.exports = {
                 });
             })
             .then(function(html) {
-                // var re = /span class=\"range-revamp-header-section__title--small notranslate\"/g;
-                // const rawTitles = [];
-                // var i = 0;
-                // var temp = size;
-                // while((match = re.exec(html)) != null && size != 0) {
-                //     var start = match.index + 67;
-                //     var end;
-                //     for(var j = 0; html.charAt(start + j) != '<'; j++) {
-                //         end = start + j;
-                //     }
-                //     rawTitles[i] = html.slice(start, end + 1);
-                //     i++;
-                //     size--;
-                // }
-
-                // re = /div class=\"range-revamp-product-compact__bottom-wrapper\"/g;
-                // const rawLinks = [];
-                // i = 0;
-                // size = temp;
-                // while((match = re.exec(html)) != null && size != 0) {
-                //     var start = match.index + 66;
-                //     var end;
-                //     for(var j = 0; html.charAt(start + j) != '\"'; j++) {
-                //         end = start + j;
-                //     }
-                //     rawLinks[i] = html.slice(start, end + 1);
-                //     i++;
-                //     size--;
-                // }
-
-                // re = /img class=\"range-revamp-aspect-ratio-image__image\"/g;
-                // const rawImages = [];
-                // i = 0;
-                // size = temp;
-                // while((match = re.exec(html)) != null && size != 0) {
-                //     var start = match.index;
-                //     var end;
-                //     for(var j = 0; html.slice(start + j, start + j + 5) != " src=\""; j++) {
-                //         start = start + j + 6;
-                //     }
-                //     for(var k = 0; html.charAt(start + k) != '\"'; k++) {
-                //         end = start + k;
-                //     }
-                //     rawLinks[i] = html.slice(start, end + 1);
-                //     i++;
-                //     size--;
-                // }
-
-                // for(var i = 0; i < Math.min(rawTitles.length, rawLinks.length); i++) {
-                //     itemDict.push({
-                //         key: rawTitles[i],
-                //         value: [rawLinks[i], rawImages[i]]
-                //     });
-                // }
                 const soup = new JSSoup(html);
                 const rawTitles = soup.findAll('span', 'range-revamp-header-section__description-text');
                 const rawLinks = soup.findAll('div', 'range-revamp-product-compact__bottom-wrapper');

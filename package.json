@@ -28,5 +28,10 @@
     "jssoup": "^0.0.15",
     "mongoose": "^6.0.12",
     "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^2.0.14"
   }
 }
