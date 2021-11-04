@@ -19,7 +19,9 @@
   "homepage": "https://github.com/acm-projects/DreamBoard#readme",
   "dependencies": {
     "axios": "^0.22.0",
+    "currency-converter-lt": "^1.1.4",
     "dotenv": "^10.0.0",
+    "exchange-rates-api": "^1.1.0",
     "express": "^4.17.1",
     "google-search-results-nodejs": "^2.0.1",
     "got": "^11.8.2",
