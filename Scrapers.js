@@ -1,16 +1,12 @@
 const JSSoup = require('jssoup').default;
 const puppeteer = require('puppeteer');
 const got = require('got');
-const CC = require('currency-converter-lt');
 
 module.exports = {
     ikeaScrape: async function(query, size) {
         var itemDict = [];
 
-        var currencyConverter = new CC({from:"SAR", to:"USD", amount:1})
-        var exchange = await currencyConverter.convert();
-
-        const url = "https://www.ikea.com/sa/en/search/products/?q=" + query.replace(' ', '+');
+        const url = "https://www.ikea.com/us/en/search/products/?q=" + query.replace(' ', '+');
 
         const browser = puppeteer.launch();    
         await browser
@@ -32,9 +28,7 @@ module.exports = {
                     var title = rawTitles[i].nextSibling.nextElement._text;
                     var link = rawLinks[i].nextElement.attrs.href;
                     var thumbnail = rawImages[i].nextElement.nextElement.attrs.src;
-                    var price = rawPrices[i].nextElement._text;
-                    price = parseInt(price) * exchange;  // Conversion from SAR to USD
-                    price = "$" + price.toFixed(2);
+                    var price = "$" + rawPrices[i].nextElement._text;
                     itemDict.push({
                         key: title,
                         value: [link, thumbnail, price]
