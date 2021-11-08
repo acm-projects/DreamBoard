@@ -1,21 +1,19 @@
 <template>
-  
-  <div id="nav">
-    <ul class="header">
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/colorpicker">Color Picker</router-link></li>
-      <li><router-link to="/fileupload">File Upload</router-link></li>
-      <li><router-link to="/resultspage">Results Page</router-link></li>
-      <li style="float: right"><router-link to="/login">Login</router-link></li>
-    </ul>
-  </div>
-  <!--<div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/login">Login</router-link>
-  </div>-->
+  <NavBar/>
   <router-view/>
 </template>
+
+<script>
+import NavBar from './components/NavBar.vue'
+
+
+export default {
+  name: 'App',
+  components: {
+    NavBar
+  },
+}
+</script>
 
 <style>
 body {

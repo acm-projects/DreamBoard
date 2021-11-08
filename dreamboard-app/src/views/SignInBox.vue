@@ -32,11 +32,27 @@
           />
         </div>
       </form>
+      <div class="submitButton">
+      <p>Submit!</p>
+    </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+.submitButton{
+  margin: auto;
+  display: block;
+  background-color: rgb(172, 196, 197);
+  width: 20%;
+}
+
+.submitButton:hover {
+  /*background-color: rgb(72, 73, 60);*/
+  background-color: rgb(73, 104, 122);
+}
+
 .container {
   position: absolute;
   text-align: center;

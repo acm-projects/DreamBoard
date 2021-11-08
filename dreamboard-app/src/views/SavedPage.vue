@@ -1,9 +1,6 @@
 <template>
 <div>
-  <div id="results">
-    <NavBar/>
-  </div>
-<div class="MyDesigns">
+  <div class="MyDesigns">
         <p>My Designs</p>
         </div>
 <!---<div class="backToCP">
@@ -12,8 +9,8 @@
         </div>--->
 
 <div class="flex-container">
-    <div class= "rect1"> </div>
-    <div class= "rect2"> </div>
+    <div> <div class= "rect1"></div> </div>
+    <div> <div class= "rect2"></div> </div>
     <div class= "rect3"> </div>
     <div class= "rect4"> </div>
     <div class= "rect5"> </div>

@@ -53,7 +53,7 @@ export default {
 }
 .paragraph {
   background: rgba(116, 167, 196, 0.87);
-  font-family: MPLUS;
+  font-family: Avenir;
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
@@ -66,7 +66,8 @@ export default {
 }
 .pic {
   max-width: 100%;
-  scale: 200%;
+  
+  overflow: hidden;
   padding: 15%;
 }
 </style>
