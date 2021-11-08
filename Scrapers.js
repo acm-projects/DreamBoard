@@ -42,7 +42,7 @@ module.exports = {
                 }
 
             }).catch(function(err) {
-                console.log(err);
+                return err;
             });
 
         (await browser).close();
@@ -71,8 +71,9 @@ module.exports = {
                     value: [link, thumbnail, price]
                 });
             }
-        } catch (error) {
-            console.log(error.response.body);
+        } catch (error)
+        {
+            console.log(error);
         }
     
         return itemDict;

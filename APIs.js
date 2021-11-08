@@ -47,7 +47,8 @@ async function imaggaColors(imageURL)
 async function etsyProducts(query,size)
 {
     const etsyKey = process.env.ETSY_KEYSTRING;
-    var url = "https://openapi.etsy.com/v3/application/listings/active?".concat("limit=", size, "&keywords=", query);
+    var url = "https://openapi.etsy.com/v3/application/listings/active?".concat("&keywords=", query);
+    // var url = "https://openapi.etsy.com/v3/application/listings/active?".concat("limit=", size, "&keywords=", query);
     var config =
     {
         method: 'get',
@@ -57,18 +58,50 @@ async function etsyProducts(query,size)
             'x-api-key': etsyKey
         }
     };
-    var results = axios(config)
+    var info = axios(config)
     .then(function (response)
     {
-        results = response.data.results;
-        return results;
+        info = response.data.results;
+        return info;
     }).catch(error =>
     {
         // results = "Etsy Error caught: " + "Error " + error.response.status + ": " + error.response.data.error;
-        results = error.response.status;
-        return results;
-    })
-    return results;
+        info = error.response.status;
+        return info;
+    });
+    return info;
+}
+
+async function etsyThumbnail(listingid,shopid)
+{
+    const etsyKey = process.env.ETSY_KEYSTRING;
+    var url = "https://openapi.etsy.com/v3/application/shops/images";
+    var config =
+    {
+        method: 'get',
+        url: url,
+        headers:
+        {
+            'x-api-key': etsyKey
+        },
+        params:
+        {
+            "shop_id" : shopid,
+            "listing_id" : listingid
+        }
+    };
+    var result = axios(config)
+    .then(function (response)
+    {
+        result = response.data['icon_url_fullxfull'];
+        return result;
+    }).catch(error =>
+    {
+        // results = "Etsy Error caught: " + "Error " + error.response.status + ": " + error.response.data.error;
+        result = error.response.status;
+        return result;
+    });
+    return result;
 }
 
 async function productSearchSerpAPI(params)
@@ -189,29 +222,6 @@ module.exports =
     walmartProducts,
     homeDepotProducts,
     etsyProducts,
+    etsyThumbnail,
     imaggaColors
 };
-
-// async function testAPIs()
-// {
-//     // etsy ping
-
-//     // serp other
-//     var serpCheckURL = "https://serpapi.com/account?api_key=" + process.env.SERP_API_KEY;
-//     console.log(serpCheckURL);
-//     var serpCheck = axios.get({url: serpCheckURL})
-//     .then(function (response)
-//     {
-//         results = response.data;
-//         return results;
-//     })
-//     .catch(error =>
-//     {
-//         results = "SERP Check Error " + (error.response.status) + ": " + error.response.data.error;
-//         return results;
-//     });
-//     return serpCheck;
-
-//     // imagga usage
-
-// }
