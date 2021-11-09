@@ -6,7 +6,7 @@ module.exports = {
     ikeaScrape: async function(query, size) {
         var itemDict = [];
 
-        const url = "https://www.ikea.com/us/en/search/products/?q=" + query.replace(' ', '+');
+        const url = "https://www.ikea.com/us/en/search/products/?q=" + query.replace('%20', '+');
 
         const browser = puppeteer.launch();    
         await browser
@@ -48,7 +48,7 @@ module.exports = {
         var itemDict = [];
         
         try {
-            const url = "https://www.nfm.com/search?q=" + query.replace(' ', '+') + "&lang=en_US&sz=" + size;
+            const url = "https://www.nfm.com/search?q=" + query.replace('%20', '+') + "&lang=en_US&sz=" + size;
             const response = await got(url);
             const soup = new JSSoup(response.body);
             const rawTitles = soup.findAll('div', 'pdp-link');
