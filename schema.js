@@ -47,13 +47,11 @@ async function startDB()
         }
 
         const col = db.collection("users");
-        const p = await addUser(userData,col);
-        // const p = await getUser(userData.emailID,col);
-        col.find()
+        await addUser(userData,col);
+        const p = await getUser(userData.emailID,col);
+        col.find();
 
         console.log(p);
-
-
 
     }
     catch (err)
@@ -74,12 +72,12 @@ async function addUser(userData,col)
 
 async function deleteUser(id,col)
 {
-
+    return col.deleteOne(id);
 }
 
 async function getUser(email,col)
 {
-       
+    return col.findOne({emailID: email});
 }
 
 startDB().catch(console.dir);
