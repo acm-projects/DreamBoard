@@ -48,11 +48,9 @@ async function startDB()
 
         const col = db.collection("users");
         await addUser(userData,col);
-        const user = await getUser(userData.emailID,col);
-        const p = await deleteUser(user, col);
+        // const user = await getUser(userData.emailID,col);
+        // const p = await deleteUser(user, col);
         col.find();
-
-        console.log(p);
 
     }
     catch (err)
