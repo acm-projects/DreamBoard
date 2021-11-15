@@ -47,9 +47,11 @@
 const express = require('express');
 const APIs = require('./APIs.js');
 const Scrapers = require('./Scrapers.js');
+const schema = require('./schema.js');
+const bodyParser = require('body-parser').urlencoded({ extended: false });
 var app = express();
 
-async function requestNFM (req, res, next)
+async function requestNFM (req)
 {
     var query = req.query.query;
     var size = req.query.size;
@@ -69,10 +71,9 @@ async function requestNFM (req, res, next)
     }
 
     req.requestNFM = formatResponse(response,title);
-    next();
 }
 
-async function requestIKEA (req, res, next)
+async function requestIKEA (req)
 {
     var query = req.query.query;
     var size = req.query.size;
@@ -93,10 +94,9 @@ async function requestIKEA (req, res, next)
     }
 
     req.requestIKEA  = formatResponse(response,title);
-    next();
 }
 
-async function requestWalmart(req, res, next)
+async function requestWalmart(req)
 {
     var query = req.query.query;
     var size = req.query.size;
@@ -118,10 +118,9 @@ async function requestWalmart(req, res, next)
     }
 
     req.requestWalmart = formatResponse(response,title);
-    next();
 }
 
-async function requestGoogle(req, res, next)
+async function requestGoogle(req)
 {
     var query = req.query.query;
     var size = req.query.size;
@@ -142,10 +141,9 @@ async function requestGoogle(req, res, next)
     }
 
     req.requestGoogle = formatResponse(response,title);
-    next();
 }
 
-async function requestHomeDepot(req, res, next)
+async function requestHomeDepot(req)
 {
     var query = req.query.query;
     var size = req.query.size;
@@ -167,10 +165,9 @@ async function requestHomeDepot(req, res, next)
     }
 
     req.requestHomeDepot = formatResponse(response,title);
-    next();
 }
 
-async function requestEtsy(req, res, next)
+async function requestEtsy(req)
 {
     var query = req.query.query;
     var size = req.query.size;
@@ -193,7 +190,77 @@ async function requestEtsy(req, res, next)
     }
 
     req.requestEtsy = formatResponse(response,title);
-    next();
+}
+
+async function addUser(req) 
+{
+    try {
+        await schema.client.connect();
+        const db = schema.client.db('Dreamboard');
+
+        var userData =
+        {
+            emailID:req.body.emailID,
+            password:req.body.password
+        }
+
+        const col = db.collection("Users");
+
+        req.addUser = await schema.addUser(userData, col);
+    } catch(err) {
+        req.addUser = err.stack;
+        console.log(req.addUser);
+    } finally {
+        await schema.client.close();
+    }
+}
+
+async function getUser(req) {
+    try {
+        await schema.client.connect();
+        const db = schema.client.db('Dreamboard');
+
+        const col = db.collection("Users");
+
+        req.getUser = await schema.getUser(req.query.emailID, col);
+    } catch(err) {
+        req.getUser = err.stack;
+        console.log(req.getUser);
+    } finally {
+        await schema.client.close();
+    }
+}
+
+// async function delUser(req) {
+//     try {
+//         await schema.client.connect();
+//         const db = schema.client.db('Dreamboard');
+
+//         const col = db.collection("Users");
+
+//         req.delUser = await schema.deleteUser(req.body.id, col);
+//     } catch(err) {
+//         req.delUser = err.stack;
+//         console.log(req.delUser);
+//     } finally {
+//         await schema.client.close();
+//     }
+// }
+
+async function addCollection(req) {
+    try {
+        await schema.client.connect();
+        const db = schema.client.db('Dreamboard');
+
+        const col = db.collection('Collection');
+
+        req.addCollection = await schema.addCollection(req.body.title, col);
+    } catch(err) {
+        req.addCollection = err.stack;
+        console.log(req.addCollection);
+    } finally {
+        await schema.client.close();
+    }
 }
 
 function formatResponse(response,title)
@@ -214,38 +281,62 @@ function formatResponse(response,title)
     return pieces;
 }
 
-app.use([requestNFM, requestIKEA, requestWalmart, requestGoogle, requestHomeDepot, requestEtsy]);
+// Database methods
+app.use(bodyParser);
+app.post('/postUSER', async function(req, res){
+    await addUser(req);
+    res.send(req.addUser);
+});
+app.get('/getUSER', async function(req, res) {
+    await getUser(req);
+    res.send(req.getUser);
+});
+// app.delete('/delUSER', async function(req, res) {
+//     await delUser(req);
+//     res.send(req.delUser);
+// });
+app.post('/postCOL', async function(req, res) {
+    await addCollection(req);
+    res.send(req.addCollection);
+});
 
-app.get('/getNFM', function (req, res)
+// API and Scraper GET methods
+app.get('/getNFM', async function (req, res)
 {
-    var responseText = '<small>' + JSON.stringify(req.requestNFM) + '</small>'
-    res.send(responseText)
-})
-app.get('/getIKEA', function (req, res)
+    await requestNFM(req);
+    var responseText = '<small>' + JSON.stringify(req.requestNFM) + '</small>';
+    res.send(responseText);
+});
+app.get('/getIKEA', async function (req, res)
 {
-    var responseText = '<small>' + JSON.stringify(req.requestIKEA) + '</small>'
-    res.send(responseText)
-})
-app.get('/getWAL', function (req, res)
+    await requestIKEA(req);
+    var responseText = '<small>' + JSON.stringify(req.requestIKEA) + '</small>';
+    res.send(responseText);
+});
+app.get('/getWAL', async function (req, res)
 {
-    var responseText = '<small>' + JSON.stringify(req.requestWalmart) + '</small>'
-    res.send(responseText)
-})
-app.get('/getGOO', function (req, res)
+    await requestWalmart(req);
+    var responseText = '<small>' + JSON.stringify(req.requestWalmart) + '</small>';
+    res.send(responseText);
+});
+app.get('/getGOO', async function (req, res)
 {
-    var responseText = '<small>' + JSON.stringify(req.requestGoogle) + '</small>'
-    res.send(responseText)
-})
-app.get('/getHOME', function (req, res)
+    await requestGoogle(req);
+    var responseText = '<small>' + JSON.stringify(req.requestGoogle) + '</small>';
+    res.send(responseText);
+});
+app.get('/getHOME', async function (req, res)
 {
-    var responseText = '<small>' + JSON.stringify(req.requestHomeDepot) + '</small>'
-    res.send(responseText)
-})
-app.get('/getETSY', function (req, res)
+    await requestHomeDepot(req);
+    var responseText = '<small>' + JSON.stringify(req.requestHomeDepot) + '</small>';
+    res.send(responseText);
+});
+app.get('/getETSY', async function (req, res)
 {
-    var responseText = '<small>' + JSON.stringify(req.requestEtsy) + '</small>'
-    res.send(responseText)
-})
+    await requestEtsy(req);
+    var responseText = '<small>' + JSON.stringify(req.requestEtsy) + '</small>';
+    res.send(responseText);
+});
 
 // NFM - http://localhost:3000/getNFM?query=modern%20light%20green%20chair&size=5 - WORKING
 // IKEA - http://localhost:3000/getIKEA?query=modern%20light%20green%20chair&size=5 - WORKING
@@ -254,4 +345,4 @@ app.get('/getETSY', function (req, res)
 // HOME - http://localhost:3000/getHOME?query=modern%20light%20green%20chair&size=5 - WORKING
 // ETSY - http://localhost:3000/getETSY?query=modern%20light%20green%20chair&size=5 - WORKING
 
-app.listen(3000)
+app.listen(3000);

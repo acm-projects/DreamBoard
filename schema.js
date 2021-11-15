@@ -42,15 +42,37 @@ async function startDB()
         
         var userData =
         {
-            emailID: "totallyrealperson@yesmail.com",
+            emailID: "testuser@gmail.com",
             password: "totallySecurePassword"
         }
 
         const col = db.collection("users");
-        await addUser(userData,col);
-        // const user = await getUser(userData.emailID,col);
+        // await addUser(userData,col);
+        const user = await getUser(userData.emailID,col);
         // const p = await deleteUser(user, col);
-        col.find();
+        //col.find();
+
+        var furnCol = db.collection('furnitures');
+
+        var pieceData = {
+            source: "IKEA",
+            title: "test",
+            link: "test",
+            thumbnail: "test",
+            price: 19
+        };
+
+        var pieceID = await addFurniture(pieceData, furnCol)._id;
+
+        var collectionData = {
+            title: "test",
+            pieces: [pieceID]
+        };
+
+        var collCol = db.collection('collections');
+        var collectionID = await addCollection(userData.emailID, collectionData, collCol, col)._id;
+
+        console.log(collectionID);
 
     }
     catch (err)
@@ -79,9 +101,59 @@ async function getUser(email,col)
     return col.findOne({emailID: email});
 }
 
+async function addFurniture(pieceData, col) 
+{
+    return col.insertOne(pieceData);
+}
+
+async function getFurniture(title, col) 
+{
+    return col.findOne({title: title});
+}
+
+async function deleteFurniture(id, col) 
+{
+    return col.deleteOne(id);
+}
+
+async function addCollection(email, collectionData, collCol, userCol) 
+{
+    var collectionID = collCol.insertOne(collectionData, collCol)._id;
+    var collections = userCol.findOne({emailID: email});
+    console.log(collections);
+    collections.push(collectionID);
+    var returnData = userCol.updateOne({emailID: email},
+    {
+        $set: {
+            collections: collections
+        }
+    });
+    return returnData;
+}
+
+async function getCollection(title, col) 
+{
+    return col.findOne({title: title});
+}
+
+async function deleteCollection(id, col) 
+{
+    return col.deleteOne(id);
+}
+
 startDB().catch(console.dir);
 
 module.exports = 
 {
-    startDB
+    startDB,
+    addUser,
+    deleteUser,
+    getUser,
+    addCollection,
+    getCollection,
+    deleteCollection,
+    addFurniture,
+    getFurniture,
+    deleteFurniture,
+    client
 };

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/acm-projects/DreamBoard#readme",
   "dependencies": {
     "axios": "^0.22.0",
+    "body-parser": "^1.19.0",
     "currency-converter-lt": "^1.1.4",
     "dom-parser": "^0.1.6",
     "dotenv": "^10.0.0",
