@@ -19,7 +19,7 @@
   "homepage": "https://github.com/acm-projects/DreamBoard#readme",
   "dependencies": {
     "axios": "^0.22.0",
-    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "currency-converter-lt": "^1.1.4",
     "dom-parser": "^0.1.6",
     "dotenv": "^10.0.0",
@@ -29,12 +29,12 @@
     "got": "^11.8.2",
     "jsdom": "^18.0.1",
     "jssoup": "^0.0.15",
+    "mongodb": "^4.1.4",
     "mongoose": "^6.0.12",
     "puppeteer": "^10.4.0"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.1",
-    "livereload": "^0.9.3",
-    "nodemon": "^2.0.14"
+    "livereload": "^0.9.3"
   }
 }

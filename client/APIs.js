@@ -1,24 +1,13 @@
-/*
-     - SERP API
-        Google Product Search
-        Home Depot Product Search
-        Walmart Product Search
-    - Etsy API
-        Etsy Listing Search
-    - Imagga
-        Get color scheme
-*/
-
 require('dotenv').config({path:"./.env"});
 const axios = require('axios');
 
 
-async function imaggaColors(imageURL)
+async function imaggaColors(imageURL, count)
 {
     const apiKey = process.env.IMAGGA_API_KEY;
     const apiSecret = process.env.IMAGGA_API_SECRET;
     const authorization = `Basic ${Buffer.from(`${apiKey}:${apiSecret}`).toString('base64')}`;
-    const url = "https://api.imagga.com/v2/colors?image_url=" + imageURL;
+    const url = "https://api.imagga.com/v2/colors?";
 
     var config =
     {
@@ -27,6 +16,12 @@ async function imaggaColors(imageURL)
         headers:
         {
             "Authorization": authorization
+        },
+        params:
+        {
+            'image_url' : imageURL,
+            'overall_count' : count,
+            'deterministic' : 1,
         }
     };
 
@@ -47,17 +42,35 @@ async function imaggaColors(imageURL)
 async function etsyProducts(query,size)
 {
     const etsyKey = process.env.ETSY_KEYSTRING;
-    var url = "https://openapi.etsy.com/v3/application/listings/active?".concat("&keywords=", query);
-    // var url = "https://openapi.etsy.com/v3/application/listings/active?".concat("limit=", size, "&keywords=", query);
+    var url = "https://openapi.etsy.com/v2/listings/active";
     var config =
     {
         method: 'get',
         url: url,
-        headers:
+        params:
         {
-            'x-api-key': etsyKey
+            'api_key' : etsyKey,
+            'limit' : size,
+            'keywords' : query,
+            // 'color_triplet' : color,
+            // 'color_wiggle' : 10,
+            'sort_on' : 'score',
+            'taxonomy' : 967,
+            'min_price' : 50,
+            // 'offset' : 1,
         }
     };
+    // deprecated - with v3 of api, gets quality results
+    // var url = "https://openapi.etsy.com/v3/application/listings/active?".concat("limit=", size, "&keywords=", query);
+    // var config =
+    // {
+    //     method: 'get',
+    //     url: url,
+    //     headers:
+    //     {
+    //         'x-api-key': etsyKey
+    //     }
+    // };
     var info = axios(config)
     .then(function (response)
     {
@@ -72,28 +85,23 @@ async function etsyProducts(query,size)
     return info;
 }
 
-async function etsyThumbnail(listingid,shopid)
+async function etsyThumbnail(listingid)
 {
     const etsyKey = process.env.ETSY_KEYSTRING;
-    var url = "https://openapi.etsy.com/v3/application/shops/images";
+    var url = "https://openapi.etsy.com/v2/listings/" + listingid + "/images";
     var config =
     {
         method: 'get',
         url: url,
-        headers:
-        {
-            'x-api-key': etsyKey
-        },
         params:
         {
-            "shop_id" : shopid,
-            "listing_id" : listingid
+            'api_key': etsyKey
         }
     };
     var result = axios(config)
     .then(function (response)
     {
-        result = response.data['icon_url_fullxfull'];
+        result = response.data.results[0]['url_fullxfull'];
         return result;
     }).catch(error =>
     {
@@ -214,6 +222,32 @@ async function homeDepotProducts(query,size)
         return products;
     });
     return products;
+}
+
+async function theColorApi(html_code)
+{
+    var config = 
+    {
+        method: 'get',
+        url: 'https://www.thecolorapi.com/id',
+        params:
+        {
+            "hex": html_code
+        }
+    };
+    var color = axios(config)
+    .then(function (response)
+    {
+        // color = response['data']['name']['value'];
+        color = response['data']['image']['bare'];
+        return color;
+    })
+    .catch(error =>
+    {
+        color = error.response;
+        return color;
+    });
+    return color;
 }
 
 module.exports =

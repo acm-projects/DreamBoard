@@ -2,7 +2,8 @@ const JSSoup = require('jssoup').default;
 const puppeteer = require('puppeteer');
 const got = require('got');
 
-module.exports = {
+module.exports =
+{
     ikeaScrape: async function(query, size) {
         var itemDict = [];
 
