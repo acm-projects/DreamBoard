@@ -257,6 +257,5 @@ module.exports =
     homeDepotProducts,
     etsyProducts,
     etsyThumbnail,
-    imaggaColors,
-    // theColorApi
+    imaggaColors
 };

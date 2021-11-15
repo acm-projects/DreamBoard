@@ -257,9 +257,3 @@ function formatResponse(response,title)
     }
     return pieces;
 }
-
-module.exports =
-{
-    getChoice,
-    getPicture
-};
